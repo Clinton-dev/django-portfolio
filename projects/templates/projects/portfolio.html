@@ -24,12 +24,23 @@
               <img src="{{project.image.url}}" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>{{project.title}}</h4>
-                <p>fullstack</p>
+                <p>{{project.category}}</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                  <a href="{{project.image.url}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
                 </div>
               </div>
+            </div>
+            <div class="portfolio-info" style="margin-top: 1em;">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Title</strong>: {{project.title}}</li>
+                <li><strong>Category</strong>: {{project.category}}</li>
+                <li><strong>Tech stack</strong>: --add Icons</li>
+                <li><strong>Github URL</strong>: <a href="{{project.gh_link}}">{{project.gh_link}}</a></li>
+                <li><strong>Project URL</strong>: <a href="{{project.live_link}}">{{project.live_link}}</a></li>
+              </ul>
+
+              <p style="text-align: justify;">{{project.Description}}</p>
             </div>
           </div>
         {% empty%}
